@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import * as fs from "fs";
-import * as path from "path";
+import { join } from "path";
 
 let idleFilePath: string
 let terminalActivityInterval: NodeJS.Timeout | undefined
@@ -25,7 +25,7 @@ export function deactivate() {
  */
 function initializeIdleFilePath() {
 	const tmpDirectory = "/tmp/"; 
-	idleFilePath = path.join(tmpDirectory, ".sagemaker-last-active-timestamp");
+	idleFilePath = join(tmpDirectory, ".sagemaker-last-active-timestamp");
 
 	// Set initial lastActivetimestamp
 	updateLastActivityTimestamp()
@@ -85,7 +85,7 @@ const checkTerminalActivity = () => {
 
 		const now = Date.now();
 		const activityDetected = files.some((file) => {
-			const filePath = path.join("/dev/pts", file);
+			const filePath = join("/dev/pts", file);
 			try {
 				const stats = fs.statSync(filePath);
 				const mtime = new Date(stats.mtime).getTime();

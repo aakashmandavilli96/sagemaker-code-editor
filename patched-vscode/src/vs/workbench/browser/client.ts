@@ -1,8 +1,8 @@
-import { Disposable } from 'vs/base/common/lifecycle';
-import { CommandsRegistry } from 'vs/platform/commands/common/commands';
-import { MenuId, MenuRegistry } from "vs/platform/actions/common/actions";
-import { localize } from "vs/nls";
-import { ILogService } from "vs/platform/log/common/log";
+import { Disposable } from '../../base/common/lifecycle.js';
+import { CommandsRegistry } from '../../platform/commands/common/commands.js';
+import { MenuId, MenuRegistry } from "../../platform/actions/common/actions.js";
+import { localize } from "../../nls.js";
+import { ILogService } from "../../platform/log/common/log.js";
 
 export class SagemakerServerClient extends Disposable {
 	constructor (
