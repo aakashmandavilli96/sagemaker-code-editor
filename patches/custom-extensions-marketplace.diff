@@ -134,7 +134,7 @@ Index: sagemaker-code-editor/vscode/src/vs/platform/extensionResourceLoader/comm
 ===================================================================
 --- sagemaker-code-editor.orig/vscode/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts
 +++ sagemaker-code-editor/vscode/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts
-@@ -16,7 +16,6 @@ import { getServiceMachineId } from '..
+@@ -15,7 +15,6 @@ import { getServiceMachineId } from '..
  import { IStorageService } from '../../storage/common/storage.js';
  import { TelemetryLevel } from '../../telemetry/common/telemetry.js';
  import { getTelemetryLevel, supportsTelemetry } from '../../telemetry/common/telemetryUtils.js';
@@ -142,7 +142,6 @@ Index: sagemaker-code-editor/vscode/src/vs/platform/extensionResourceLoader/comm
  import { TargetPlatform } from '../../extensions/common/extensions.js';
  
  const WEB_EXTENSION_RESOURCE_END_POINT_SEGMENT = '/web-extension-resource/';
- 
 @@ -123,7 +122,7 @@ export abstract class AbstractExtensionR
  					: version,
  				path: 'extension'
